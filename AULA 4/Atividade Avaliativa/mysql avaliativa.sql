@@ -5,7 +5,8 @@ CREATE TABLE Fornecedor (
     Fcodigo INT PRIMARY KEY AUTO_INCREMENT,
     Fnome VARCHAR(100) NOT NULL,
     Status VARCHAR(20) DEFAULT 'Ativo',
-    Cidade VARCHAR(100)
+    Cidade VARCHAR(100),
+    INDEX(Fcodigo)
 );
 
 CREATE TABLE Peca (
@@ -13,20 +14,22 @@ CREATE TABLE Peca (
     Pnome VARCHAR(100) NOT NULL,
     Cor VARCHAR(50) NOT NULL,
     Peso DECIMAL(10,2) NOT NULL,
-    Cidade VARCHAR(100) NOT NULL
+    Cidade VARCHAR(100) NOT NULL,
+    INDEX(Pcodigo)
 );
 
 CREATE TABLE Instituicao (
     Icodigo INT PRIMARY KEY AUTO_INCREMENT,
-    Nome VARCHAR(100) NOT NULL
+    Nome VARCHAR(100) NOT NULL,
+    INDEX(Icodigo)
 );
 
 CREATE TABLE Projeto (
     PRcod INT PRIMARY KEY AUTO_INCREMENT,
     PRnome VARCHAR(100) NOT NULL,
     Cidade VARCHAR(100),
-    Icod INT,
-    FOREIGN KEY (Icod) REFERENCES Instituicao(Icodigo)
+    FOREIGN KEY (Icod) REFERENCES Instituicao(Icodigo),
+    INDEX(PRcod)
 );
 
 CREATE TABLE Fornecimento (
@@ -48,7 +51,8 @@ CREATE TABLE Cidade (
 
 ALTER TABLE Fornecedor
     ADD COLUMN Fone VARCHAR(20),
-    ADD COLUMN Ccod INT;
+    ADD COLUMN Ccod INT,
+    DROP COLUMN CIDADE;
 
 ALTER TABLE Peca
     ADD COLUMN Ccod INT;
