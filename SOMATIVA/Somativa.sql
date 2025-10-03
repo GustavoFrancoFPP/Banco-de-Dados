@@ -1,5 +1,5 @@
-create database Formativa;
-use Formativa;
+create database Somativa;
+use Somativa;
 
 create table alunos (
   id_aluno int primary key auto_increment,
