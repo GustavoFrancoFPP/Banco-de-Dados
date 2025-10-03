@@ -83,4 +83,4 @@ select * from cursos order by carga_horaria desc limit 3;
 -- Desafio
 create index idx_email on alunos(email);
 -- --------
-drop database Formativa;
+drop database Somativa;
