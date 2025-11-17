@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+<head>
+    <title>Cadastrar Mecanicos</title>
+</head>
+<body>
+    <h1>Cadastrar Mecanicos</h1>
+    <form action="insert_mecanico.php" method="POST">
+        Nome: <input type="text" name="nome_mecanico" required><br>
+        CPF: <input type="cpf" name="cpf" required><br>
+        Especialidade: <input type="text" name="especialidade" required><br>
+        Carga Horária: <input type="number" name="carga_horaria" required><br>
+        Salario: <input type="number" name="salario" required><br>
+        <select name="status">
+            <option value="Ativo">Ativo</option>
+            <option value="Inativo">Inativo</option>
+        </select><br>
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="index.html">Voltar</a>
+</body>
+</html>

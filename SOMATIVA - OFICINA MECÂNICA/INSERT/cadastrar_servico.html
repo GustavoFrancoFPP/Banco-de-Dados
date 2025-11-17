@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+<head>
+    <title>Cadastrar Serviço</title>
+</head>
+<body>
+    <h1>Cadastrar Serviço</h1>
+    <form action="insert_servico.php" method="POST">
+        Tipo de Serviço: <input type="text" name="tipo_servico" required><br>
+        Dia de inicio: <input type="date" name="dia_inicio" required><br>
+        Preço: <input type="number" step="0.01" name="preco" required><br>
+        Tempo Estimado: <input type="number" name="tempo_estimado" required><br>
+         <button type="submit">Salvar</button>
+    </form>
+    <a href="index.html">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,423 @@
+/* style.css - CSS Profissional e Limpo */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #64748b;
+    --success: #059669;
+    --danger: #dc2626;
+    --warning: #d97706;
+    --light: #f8fafc;
+    --dark: #1e293b;
+    --border: #e2e8f0;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f1f5f9;
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    padding: 30px;
+}
+
+h1 {
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 0.9rem;
+}
+
+input, select, textarea {
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background: white;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Botões */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+}
+
+.btn-warning {
+    background: var(--warning);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Links */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Mensagens */
+.alert {
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    background: #f0fdf4;
+    border-color: var(--success);
+    color: var(--success);
+}
+
+.alert-error {
+    background: #fef2f2;
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: var(--light);
+    font-weight: 600;
+    color: var(--dark);
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+/* Ações */
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    table {
+        font-size: 0.875rem;
+    }
+    
+    .actions {
+        flex-direction: column;
+    }
+}
+
+/* Utilitários */
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.mt-30 { margin-top: 30px; }
+
+/* style.css - CSS para listar_tudo.php */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #64748b;
+    --success: #059669;
+    --danger: #dc2626;
+    --warning: #d97706;
+    --light: #f8fafc;
+    --dark: #1e293b;
+    --border: #e2e8f0;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f1f5f9;
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    padding: 30px;
+}
+
+h1 {
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--primary);
+    margin: 30px 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+    font-size: 1.5rem;
+}
+
+/* Estilo para cada seção de lista */
+.list-section {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary);
+}
+
+/* Estilo para cada item da lista */
+.list-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+}
+
+.list-item:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-1px);
+}
+
+/* Links de ação */
+.action-links {
+    margin-top: 8px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-edit {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-edit:hover {
+    background: var(--primary-dark);
+    text-decoration: none;
+    color: white;
+}
+
+.btn-delete {
+    background: var(--danger);
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #b91c1c;
+    text-decoration: none;
+    color: white;
+}
+
+/* Links gerais */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Botão voltar */
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    background: #475569;
+    text-decoration: none;
+    color: white;
+}
+
+/* Mensagens de nenhum registro */
+.no-data {
+    background: #fef3c7;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid var(--warning);
+    color: #92400e;
+    font-style: italic;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .list-item {
+        padding: 12px;
+    }
+    
+    .action-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Melhorias para a informação dos registros */
+.item-info {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.item-info strong {
+    color: var(--dark);
+}
+
+/* Destaque para IDs */
+.id-badge {
+    background: var(--primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 5px;
+}
